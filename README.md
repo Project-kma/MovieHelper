@@ -1,4 +1,4 @@
 # MovieHelper
 creating a website that can help people to choose film  
 
-Documentation: https://docs.google.com/document/d/1uohOSEzHiGdehNYPqmtQaXKXgUem5np8NRFYJpdX_0U/edit?usp=sharing
+Documentation: https://docs.google.com/document/d/16JoM-kYXNyjShkOxjhZPFrz5h950HISf4YdR_vJf7uI/edit
