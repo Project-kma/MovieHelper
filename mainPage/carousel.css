@@ -3,21 +3,10 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  background-color: rgb(233, 215, 207);
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
-
-
-   h1 {
-    background-color:rgb(163, 127, 98);
-    font: bold 3em Arial, sans-serif;
-    color: #ddccc6;
-    text-shadow: #77491b 1px 1px 0, #744111 2px 2px 0, 
-                 #693a26 3px 3px 0, #583d2e 4px 4px 0, 
-                 #38261f 5px 5px 0;
-  }
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -43,7 +32,11 @@ body {
   top: 0;
   left: 0;
   min-width: 100%;
+<<<<<<< HEAD
+  transform: translateY(-70px);
+=======
   transform: translateY(-120px);
+>>>>>>> 3e5c51c0b9ead679c62c0952eb0f47d5d04b4d36
 }
 
 
