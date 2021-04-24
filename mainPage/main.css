@@ -1,32 +1,103 @@
-
 body {
-    background-color: #c9bbfa;
+	background-color: #c9bbfa;
+}
+
+
+/*body {
+  background: url(pictures/bckgr.jpg);
+} */
+
+
+header>.navbar {
+	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
 }
 
 
 h1 {
-    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 50%);
-    /* background-color:rgb(139, 98, 163); */
-    font: bold 3em Arial, sans-serif;
-    color: #d8c6dd;
-    text-shadow: #5d1b77 1px 1px 0, #5d1174 2px 2px 0, 
-                 #4e2669 3px 3px 0, #4e2e58 4px 4px 0, 
-                 #341f38 5px 5px 0;
-  }
+	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 50%);
+	/* background-color:rgb(139, 98, 163); */
+	font: bold 3em Arial, sans-serif;
+	color: #d8c6dd;
+	text-shadow: #5d1b77 1px 1px 0, #5d1174 2px 2px 0, #4e2669 3px 3px 0, #4e2e58 4px 4px 0, #341f38 5px 5px 0;
+}
 
-  .featurette-heading, .text-muted{
-    color: #414697!important;
-  }
 
-  .lead{
-      color: #380946;
-      font-size: 15pt;
-  }
+h2 {
+	/* background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 50%); */
+	/* background-color:rgb(139, 98, 163); */
+	font: bold 3em Arial, sans-serif;
+	color: #6e2283;
+	text-shadow: #a75ec4 1px 1px 0, #b124db 2px 2px 0, #d2b0da 3px 3px 0;
+}
 
-header > .navbar {
-    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
-  }
 
-  .bottom{
-    color: #380946;
-  }
+.text-muted {
+	color: #6e2283!important;
+}
+
+
+.lead {
+	color: #380946;
+	font-size: 1.25rem;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.bottom {
+	color: #380946;
+}
+
+
+.btn-outline-success {
+	background-color: #b6dac4;
+	transition: 0.5s linear;
+}
+
+
+.coloring {
+	background: transparent;
+	border-radius: 34px;
+	border-width: 2pt;
+	transition: 0.5s linear;
+}
+
+
+.coloring:hover {
+	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 75%);
+}
+
+
+.coloring2 {
+	position: relative;
+	width: 79pt;
+	height: 1.5;
+	margin: 30px;
+	border-radius: 30px;
+	background: #c9bbfa;
+	text-align: center;
+	color: #380946;
+}
+
+
+.coloring2::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	bottom: -3px;
+	left: -3px;
+	right: -3px;
+	background: linear-gradient(35deg, #FC466B, #3F5EFB)!important;
+	border-radius: 34px;
+	z-index: -1;
+}
+
+
+.coloring2:hover {
+	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 75%);
+}
+
+
+.featurette-divider {
+	height: 6px!important;
+}
+
