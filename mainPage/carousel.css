@@ -25,13 +25,18 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
+  overflow: hidden;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
+<<<<<<< HEAD
   transform: translateY(-70px);
+=======
+  transform: translateY(-120px);
+>>>>>>> 3e5c51c0b9ead679c62c0952eb0f47d5d04b4d36
 }
 
 
