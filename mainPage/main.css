@@ -1,0 +1,32 @@
+
+body {
+    background-color: #c9bbfa;
+}
+
+
+h1 {
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 50%);
+    /* background-color:rgb(139, 98, 163); */
+    font: bold 3em Arial, sans-serif;
+    color: #d8c6dd;
+    text-shadow: #5d1b77 1px 1px 0, #5d1174 2px 2px 0, 
+                 #4e2669 3px 3px 0, #4e2e58 4px 4px 0, 
+                 #341f38 5px 5px 0;
+  }
+
+  .featurette-heading, .text-muted{
+    color: #414697!important;
+  }
+
+  .lead{
+      color: #380946;
+      font-size: 15pt;
+  }
+
+header > .navbar {
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  }
+
+  .bottom{
+    color: #380946;
+  }
