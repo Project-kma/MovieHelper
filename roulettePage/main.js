@@ -294,9 +294,7 @@ $("#search-movies").click(() => {
 })
 });
 
-let runSearch = function (keyword) {
-    
-}
+
 
 $('#yearFrom').datepicker({
   // Можно выбрать тольо даты, идущие за сегодняшним днем, включая сегодня
@@ -313,7 +311,7 @@ document.addEventListener('DOMContentLoaded', getConfig());
 
 console.log(location)
 
-runSearch("harry potter")
+
 
 
 

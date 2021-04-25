@@ -17,6 +17,8 @@
 
     <link href="style.css" rel="stylesheet">
 
+    <link href="/mainPage/main.css" rel="stylesheet">
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -46,10 +48,8 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-xl">
-          <a class="navbar-brand" href="/mainPage/index.html">Movie Helper</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <a class="navbar-brand" href="#">Movie Helper</a> <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+  
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
@@ -60,13 +60,23 @@
                 <a class="nav-link active" aria-current="page" href="#">Favourites</a>
               </li>
 
+                <a class="nav-link active" href="#">Favourites</a>
+              </li>
+  
+  
               <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">☆</a>
+                <a class="nav-link active" href="/roulettePage/index.html">Roulette</a>
+              </li>
+  
+  
+              <li class="nav-item">
+                <a aria-disabled="true" class="nav-link disabled" href="#" tabindex="-1">★</a>
               </li>
             </ul>
+  
+  
             <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input aria-label="Search" class="form-control me-2" placeholder="Find a movie" type="search"> <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
         </div>
@@ -104,9 +114,11 @@
         </div>
       </div>
       <div class="col">
-      <button type="button" id="search-movies" class="btn btn-outline-primary">Search</button>
+      <button type="button" id="search-movies" class="btn coloring2">Search</button>
     </div>
     </div>
+
+    <hr>
   </section>
 
   <div class="album py-5 bg-light">
@@ -120,10 +132,50 @@
 
 </main>
 
-<footer class="container">
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 contacts">
+          <h3>Contact</h3>
+
+      <br>
+
+      <img id="maps" src="/mainPage/pictures/maps.png">
+      <p>Vhryhoriy Skovoroda Street, 2, Kyiv</p>
+
+      <img id="phone" src="/mainPage/pictures/telephone.png">
+              <p><i class="fas fa-phone"></i> Phone: 044 425 6059</p>
+
+      <img id="email" src="/mainPage/pictures/email.png">
+              <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a></p>
+              </div>
+
+              <div class="col-md-6 col-lg-6">
+                <h3>Follow us</h3>
+                <p>
+        <a href="#"><i class="fab fa-telegram"></i></a> 
+                  <a href="#"><i class="fab fa-facebook"></i></a> 
+        <a href="#"><i class="fab fa-instagram"></i></a> 
+        <a href="#"><i class="fab fa-twitter"></i></a>
+                </p>
+              </div>
+        </div>
+    </div>
+  </div>
+
+<br>
+<br>
+
+  <div class="footer-bottom">
+    <footer class="container">
   <p class="float-end"><a href="#">Back to top</a></p>
-  <p>&copy; 04.2021 Company, Bo&Ania-Inc. </p>
-  <!-- <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
+
+  <p class="bottom">&copy; 04.2021 Company, Bo&Ania-Inc.</p>
+</footer>
+  </div>
+
+
 </footer>
 
 
