@@ -10,7 +10,6 @@ header>.navbar {
 
 h1 {
 	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 50%);
-	/* background-color:rgb(139, 98, 163); */
 	font: bold 3em Arial, sans-serif;
 	color: #d8c6dd;
 	text-shadow: #5d1b77 1px 1px 0, #5d1174 2px 2px 0, #4e2669 3px 3px 0, #4e2e58 4px 4px 0, #341f38 5px 5px 0;
@@ -18,8 +17,6 @@ h1 {
 
 
 h2 {
-	/* background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 50%); */
-	/* background-color:rgb(139, 98, 163); */
 	font: bold 3em Arial, sans-serif;
 	color: #6e2283;
 	text-shadow: #a75ec4 1px 1px 0, #b124db 2px 2px 0, #d2b0da 3px 3px 0;
@@ -99,3 +96,5 @@ h2 {
 .contacts {
 	display:inline-block;
 } 
+
+
