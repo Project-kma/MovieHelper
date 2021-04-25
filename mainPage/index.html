@@ -15,9 +15,10 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 	<link href="pictures/movie.ico" rel="shortcut icon" type="image/x-icon">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
-
 	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<script src="main.js"></script>
+
 	<!-- Custom styles for this template -->
 	<style>
 	        .bd-placeholder-img {
@@ -35,7 +36,7 @@
 	        }
 	        
 	</style>
-	<!-- <script src="main.js"></script> -->
+
 	<link href="carousel.css" rel="stylesheet">
 	<link href="main.css" rel="stylesheet">
 </head>
@@ -136,9 +137,9 @@
 
 			<div class="row featurette">
 				<div class="col-md-6">
-					<h2 class="featurette-heading">I. <span class="text-muted">Possibility to choose.</span></h2>
+					<h2 class="featurette-heading animate__animated">I. <span class="text-muted">Possibility to choose.</span></h2>
 					<br>
-					<p class="lead"><b>A large list of films opens in front of you.There you are given the opportunity to filter films by:<br>
+					<p class="lead animate__animated"><b>A large list of films opens in front of you.There you are given the opportunity to filter films by:<br>
 					<br>
 					• genre (action, comedy, drama, fantasy, etc)<br>
 					• release year (90s, 60s, 2021, etc)<br>
@@ -155,14 +156,14 @@
 
 			<div class="row featurette">
 				<div class="col-md-6 order-md-2">
-					<h2 class="featurette-heading">II. <span class="text-muted">Selection by the Universe.</span></h2>
+					<h2 class="featurette-heading animate__animated">II. <span class="text-muted">Selection by the Universe.</span></h2>
 					<br>
-					<p class="lead"><b>We connected some special programs, so that a movie from your category will randomly select.</b><br>
+					<p class="lead animate__animated"><b>We connected some special programs, so that a movie from your category will randomly select.</b><br>
 					<br>
 					<b>How does this happen? This is our secret. But you will see how different films are highlighted, from which, in the end, one special will be chosen - for you</b>
 					</p>
 				</div>
-				<div class="col-md-6 order-md-1"><img id="universe" src="pictures/universe.png" style="transform: scale(0.6);">
+				<div class="col-md-6 order-md-1"><img id="universe" src="pictures/universe.png" style="transform: scale(0.8);">
 				</div>
 			</div>
 
@@ -171,9 +172,9 @@
 
 			<div class="row featurette">
 				<div class="col-md-6">
-					<h2 class="featurette-heading">III. <span class="text-muted">All information about films.</span></h2>
+					<h2 class="featurette-heading animate__animated">III. <span class="text-muted">All information about films.</span></h2>
 					<br>
-					<p class="lead"><b>When you click on your selected movie - all the information you are interested in will be in front of your eyes.</b><br>
+					<p class="lead animate__animated"><b>When you click on your selected movie - all the information you are interested in will be in front of your eyes.</b><br>
 					<b>You will be able to appreciate the work of the universe. And if you are not satisfied, try again :)</b>
 					</p>
 				</div>
@@ -201,7 +202,7 @@
 				<div class="col-lg-4">
 					<img id="new" src="pictures/popularity.png">
 					<h2>Popular</h2>
-					<p class="lead">Top list of the most popular films in the history of cinema.Press the button and see it</p>
+					<p class="lead">Top list of the most popular films in the history of cinema. Press the button and see it</p>
 					<p><a class="btn btn-secondary coloring2" href="/roulettePage/index.html#popular">Show me &raquo;</a>
 					</p>
 				</div>
@@ -225,13 +226,61 @@
 
 
 		<!-- FOOTER -->
-		<footer class="container">
+		<!-- <footer class="container">
 			<p class="float-end"><a href="#">Back to top</a></p>
 
 			<p class="bottom">&copy; 04.2021 Company, Bo&Ania-Inc.</p>
-			<!-- <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
-		</footer>
+			<p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+		</footer> -->
+
+		<footer>
+        	<div class="footer-top">
+		        <div class="container">
+		        	<div class="row">
+		        		<div class="col-md-6 col-lg-6 contacts">
+		        			<h3>Contact</h3>
+
+							<br>
+
+							<img id="maps" src="pictures/maps.png">
+							<p>Vhryhoriy Skovoroda Street, 2, Kyiv</p>
+
+							<img id="phone" src="pictures/telephone.png">
+		                	<p><i class="fas fa-phone"></i> Phone: 044 425 6059</p>
+
+							<img id="email" src="pictures/email.png">
+		                	<p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a></p>
+	                    </div>
+
+	                    <div class="col-md-6 col-lg-6">
+	                    	<h3>Follow us</h3>
+	                    	<p>
+								<a href="#"><i class="fab fa-telegram"></i></a> 
+	                    		<a href="#"><i class="fab fa-facebook"></i></a> 
+								<a href="#"><i class="fab fa-instagram"></i></a> 
+								<a href="#"><i class="fab fa-twitter"></i></a>
+	                    	</p>
+	                    </div>
+		            </div>
+		        </div>
+	        </div>
+
+			<br>
+			<br>
+			
+	        <div class="footer-bottom">
+	        	<footer class="container">
+					<p class="float-end"><a href="#">Back to top</a></p>
+		
+					<p class="bottom">&copy; 04.2021 Company, Bo&Ania-Inc.</p>
+				</footer>
+	        </div>
+
+
+        </footer>
+
 	</main>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

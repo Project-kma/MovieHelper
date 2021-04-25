@@ -101,3 +101,6 @@ h2 {
 	height: 6px!important;
 }
 
+.contacts {
+	display:inline-block;
+}
