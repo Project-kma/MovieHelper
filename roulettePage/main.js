@@ -255,10 +255,11 @@ $("#actor-name").blur(() => {
   }, 100);
 })
 
+$("#search-movies").focus(() => $("#search-movies").blur());
 
 // доробити
 $("#search-movies").click(() => {
-
+  $("#search-movies").blur();
   let url = ''.concat(baseURL, 'discover/movie', '?api_key=', APIKEY);
 
   let ganre = $("#inputGroupSelect01").children("option:selected").val();
