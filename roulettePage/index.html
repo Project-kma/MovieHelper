@@ -33,10 +33,16 @@
       }
     </style>
 
-    
+<link href="dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+
   </head>
   <body>
-    
+
+    <div class="alert alert-danger alert-dismissible fade show hide" id="noActor" role="alert" style="display: none; width: 30%; position:fixed; top: 70px; left: 10px;">
+      <strong>No such actor.</strong> Put the full name of an actor, please.
+      <button type="button" id="btn-close-alert" class="btn-close" aria-label="Close"></button>
+    </div>
+
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-xl">
@@ -49,9 +55,7 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Favourites</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="/bin/index.html">Roulette</a>
-              </li>
+             
               <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">☆</a>
               </li>
@@ -66,9 +70,10 @@
     </header>
 
 <main>
+ 
 
   <section class="py-5 text-center container">
-    <div class="row row-cols-1  row-cols-md-2 row-cols-xl-3 py-lg-5">
+    <div class="row row-cols-1  row-cols-md-2 row-cols-xl-3 py-lg-5" style="justify-content: center;">
       <div class="col">
         <div class="input-group mb-3">
           <label class="input-group-text" for="inputGroupSelect01">Genre</label>
@@ -85,16 +90,25 @@
       </div>
       <div class="col">
         <div class="input-group mb-3">
-          
+          <div class="input-group">
+            <span class="input-group-text">Year</span>
+            <input type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" id="yearFrom" data-min-view="years"
+            data-view="years" aria-label="Year from" class="form-control datepicker-here" data-date-format="yyyy"  placeholder="From">
+            <input type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" data-min-view="years"
+            data-view="years" id="yearTo" aria-label="Year to" class="form-control datepicker-here" data-date-format="yyyy" placeholder="To">
+          </div>
         </div>
       </div>
+      <div class="col">
+      <button type="button" id="search-movies" class="btn btn-outline-primary">Search</button>
+    </div>
     </div>
   </section>
 
   <div class="album py-5 bg-light">
     <div class="container-xl">
 
-      <div id="all-movies" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-xl-6 g-3">
+      <div id="all-movies" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-xl-6 g-3" style="min-height: 600px;">
         
       </div>
     </div>
@@ -110,6 +124,10 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="dist/js/datepicker.min.js"></script>
 
 <script src="main.js"></script>
       
