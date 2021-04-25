@@ -3,11 +3,6 @@ body {
 }
 
 
-/*body {
-  background: url(pictures/bckgr.jpg);
-} */
-
-
 header>.navbar {
 	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
 }
@@ -103,4 +98,4 @@ h2 {
 
 .contacts {
 	display:inline-block;
-}
+} 
