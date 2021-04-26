@@ -21,7 +21,9 @@ body {
     
   }
 
-  
+  .bg {
+    background: #c9bbfa;
+  }
 
   #poster > img {
     transition: 0.5s;
@@ -35,6 +37,9 @@ body {
     transform:  scaleX(1.2) scaleY(1.2);
  
   }
+ 
+
+
 
   .autocomplete {
     /* контейнер должен быть расположен относительно: */

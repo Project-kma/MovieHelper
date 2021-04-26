@@ -26,16 +26,13 @@ let actors = null;
 //     </div>
 //   </div>`
 
-{/* <p> ${movie["overview"]} </p> */}
 
-
-{/* <div height="301" id="img-wrapper">  </div> */}
 
 
 let getCard = (movie) => {
     // console.log(movie);
     return `<div class="col">
-    <div class="card shadow-sm" m-id="${movie["id"]}"  style="height: 100%;" data-toggle="tooltip" data-placement="top" title="${movie["title"]}">
+    <div class="card" m-id="${movie["id"]}"  style="height: 100%;" data-toggle="tooltip" data-placement="top" title="${movie["title"]}">
       <div id="poster">
         <img src=${ movie["poster_path"] == null? "no-poster.jpg" : baseImageURL + "w500/" + movie["poster_path"]} alt="${movie["title"]}"/>
       </div>
@@ -276,23 +273,27 @@ $("#search-movies").click(() => {
 
 
   document.getElementById('all-movies').innerHTML = "";
-  fetch(url)
-  .then(result=>result.json())
-  .then((data)=>{
-  if (data.total_results > 0) {
-    console.log(data);
-    for (let movie in data.results) {
-      if (data.results[movie].vote_average != 0 && data.results[movie].vote_count != 0)
-      document.getElementById('all-movies').innerHTML += getCard(data.results[movie]);
+
+  for (let i = 1; i < 3; i++) {
+    fetch(url + "&page=" + i)
+    .then(result=>result.json())
+    .then((data)=>{
+    if (data.total_results > 0) {
+      console.log(data);
+      for (let movie in data.results) {
+        if (data.results[movie].vote_average != 0 && data.results[movie].vote_count != 0)
+        document.getElementById('all-movies').innerHTML += getCard(data.results[movie]);
+      }
     }
-  }
-  else {
-    $("#all-movies").append(`<div> <div class="alert alert-secondary" style=" font-height: 100%;" role="alert">
-    <span>No such results</span>
-  </div></div>`);
+    else {
+      $("#all-movies").append(`<div> <div class="alert alert-secondary" style=" font-height: 100%;" role="alert">
+      <span>No such results</span>
+    </div></div>`);
+    }
+    
+  })
   }
   
-})
 });
 
 
@@ -312,7 +313,45 @@ document.addEventListener('DOMContentLoaded', getConfig());
 
 console.log(location)
 
+let initFunc = () => {
+  let url = ''.concat(baseURL, 'discover/movie', '?api_key=', APIKEY, "&sort_by=release_date.desc&release_date.lte=2021-04-30");
 
+  // document.getElementById('all-movies').innerHTML = "";
+  let steps = 0;
+  if (location.hash == "#new") {
+    steps = 10;
+    url = ''.concat(baseURL, 'discover/movie', '?api_key=', APIKEY, "&sort_by=release_date.desc&release_date.lte=2021-04-30");
+  }
+  else if (location.hash == "#popular") {
+    steps = 5;
+    url = ''.concat(baseURL, 'trending/movie/week', '?api_key=', APIKEY);
+  }
+  else if (location.hash == "#cartoons") {
+    steps = 5;
+    url = ''.concat(baseURL, 'discover/movie', '?api_key=', APIKEY, "&with_genres=16");
+  }
+  else {
+    steps = 3
+    url = ''.concat(baseURL, 'discover/movie', '?api_key=', APIKEY);
+  }
+  for (let i = 1; i < steps; i++) {
+    
+    fetch(url + "&page=" + i)
+    .then(result=>result.json())
+    .then((data)=>{
+      if (data.total_results > 0) {
+        console.log(data);
+        for (let movie in data.results) {
+          if (data.results[movie].poster_path != null && data.results[movie].vote_average != 0 
+            && data.results[movie].vote_count != 0) {
+            document.getElementById('all-movies').innerHTML += getCard(data.results[movie]); 
+          }
+        }
+      }
+    })
+  }
+}
+initFunc();
 
 
 
