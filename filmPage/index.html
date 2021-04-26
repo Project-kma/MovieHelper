@@ -59,24 +59,18 @@
             </ul>
   
   
-            <form class="d-flex">
-              <input aria-label="Search" class="form-control me-2" placeholder="Find a movie" type="search"> <button class="btn btn-outline-success" type="submit">Search</button>
+            <form class="d-flex" style="justify-content:center;">
+
+              <div class="input-group searching" >
+                <input id="Search" class="form-control" placeholder="Find a movie" type="search">
+                <a class="btn btn-outline-success coloring3" id="searchN" type="submit">Search</a>
+              </div>
             </form>
           </div>
         </div>
       </nav>
     </header>
-    
-      <img class="big" style="min-width:100%; min-height: 100%; max-height: 170%; position: fixed; z-index: -1; transform: translateX(-50%) translateY(-20%); left: 50%;">
-
-
-    
-
-  
-
-  
-  
-
+  <img class="big" style="min-width:100%; min-height: 100%; max-height: 170%; position: fixed; z-index: -1; transform: translateX(-50%) translateY(-20%); left: 50%;">
   <div class="main">
     <div class="container d-flex" style="flex-direction: column; margin-top: 8%;">
       <div class="d-flex" style="flex-direction: row;"><div class=""><img id="poster"></div>
@@ -84,7 +78,7 @@
         <h1 id="name"></h1>
         <p class="overview"></p>
         <p class="lead">
-          <a href="" id="more" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+          <a href="" id="more" class="btn btn-lg btn-secondary fw-bold border-white bg-white ">Learn more</a>
         </p>
       </div>
     </div> 

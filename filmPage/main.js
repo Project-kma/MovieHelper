@@ -6,7 +6,7 @@ let baseImageURL = null;
 let getCard = (movie) => {
     // console.log(movie);
     return `<div class="col">
-    <a class="card" m-id="${movie["id"]}"  href="/filmPage/index.html#${movie["id"]}"  style="height: 100%;" data-toggle="tooltip" data-placement="top" title="${movie["title"]}">
+    <a class="card" m-id="${movie["id"]}"  href="/filmPage/index.html#${movie["id"]}"  style="height: 100%;" data-toggle="tooltip" data-placement="top" style="border: 0px;" title="${movie["title"]}">
       <div id="poster" onclick="init(${movie["id"]})">
         <img src=${ movie["poster_path"] == null? "no-poster.jpg" : baseImageURL + "w500/" + movie["poster_path"]} alt="${movie["title"]}"/>
       </div>
@@ -77,6 +77,14 @@ let init = (id) => {
         })
     })  
 }
+
+$("#searchN").click(() => {
+    if ($("#Search").val().length > 0) {
+        location = "/roulettePage/index.html?" + $("#Search").val();
+    } else {
+        window.location.reload();
+    }
+})
 
   document.addEventListener('DOMContentLoaded', getConfig());
 

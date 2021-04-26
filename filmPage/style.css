@@ -18,5 +18,25 @@ a {
 #all-movies {
     box-sizing: border-box;
     /* min-height: 200px;  */
-    background-color: white;
+    border: none;
+}
+
+.coloring3 {
+	position: relative;
+	padding-left: -40px;
+	border-radius: 30px;
+	border-color: #a483ad!important;
+	background: linear-gradient(35deg, #FC466B, #a75ec4, #3F5EFB)!important;
+	text-align: center;
+	color: #ffffff;
+}
+
+
+.coloring3::before {
+	content: "";
+	position: absolute;
+	border-color: #8e6e97!important;
+	
+	border-radius: 34px;
+	z-index: -1;
 }

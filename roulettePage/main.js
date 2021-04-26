@@ -296,6 +296,14 @@ $("#search-movies").click(() => {
   }
 });
 
+$("#searchN").click(() => {
+  if ($("#Search").val().length > 0) {
+      location = "/roulettePage/index.html?" + $("#Search").val();
+  } else {
+      window.location.reload();
+  }
+})
+
 
 $('#yearFrom').datepicker({
   // Можно выбрать тольо даты, идущие за сегодняшним днем, включая сегодня
@@ -328,6 +336,10 @@ let initFunc = () => {
   else if (location.hash == "#cartoons") {
     steps = 5;
     url = ''.concat(baseURL, 'discover/movie', '?api_key=', APIKEY, "&with_genres=16");
+  }
+  else if (location.search != "") {
+    steps = 5;
+    url = ''.concat(baseURL, 'search/movie', '?api_key=', APIKEY, "&query=", location.search.substr(1));
   }
   else {
     steps = 3
