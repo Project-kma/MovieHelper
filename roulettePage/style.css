@@ -21,6 +21,10 @@ body {
     
   }
 
+  .card {
+    border: 0px solid;
+  }
+
   .bg {
     background: #c9bbfa;
   }

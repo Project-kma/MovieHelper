@@ -29,4 +29,11 @@
     $('.shpunk2').smoove(changes2);
     $('.shpunk3').smoove(changes3);
 
+    $("#searchN").click(() => {
+      if ($("#Search").val().length > 0) {
+          location = "/roulettePage/index.html?" + $("#Search").val();
+      } else {
+          window.location.reload();
+      }
+    })
 
