@@ -56,12 +56,6 @@ h5 {
 }
 
 
-.btn-outline-success {
-	background-color: #b6dac4;
-	transition: 0.5s linear;
-}
-
-
 .coloring {
 	position: relative;
 	margin: 30px;
@@ -79,14 +73,14 @@ h5 {
 	bottom: -3px;
 	left: -3px;
 	right: -3px;
-	background: linear-gradient(35deg, #FC466B, #3F5EFB)!important;
+	background: linear-gradient(35deg, #f7365d, #3F5EFB)!important;
 	border-radius: 34px;
 	z-index: -1;
 }
 
 
 .coloring:hover {
-	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 55%);
+	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 65%);
 }
 
 
@@ -117,6 +111,27 @@ h5 {
 
 .coloring2:hover {
 	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 75%);
+}
+
+
+.coloring3 {
+	position: relative;
+	padding-left: -40px;
+	border-radius: 30px;
+	border-color: #a483ad!important;
+	background: linear-gradient(35deg, #FC466B, #a75ec4, #3F5EFB)!important;
+	text-align: center;
+	color: #ffffff;
+}
+
+
+.coloring3::before {
+	content: "";
+	position: absolute;
+	border-color: #8e6e97!important;
+	
+	border-radius: 34px;
+	z-index: -1;
 }
 
 
@@ -162,4 +177,18 @@ footer {
 
 .bottom {
 	text-align: left;
+}
+
+
+.carousel-caption {
+	bottom: 0.2rem;
+}
+
+
+.searching {
+	padding-top: 13px;
+}
+
+.collapse {
+	max-height: 40px;
 }
