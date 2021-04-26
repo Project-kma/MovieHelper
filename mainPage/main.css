@@ -135,11 +135,6 @@ h5 {
 }
 
 
-.btn-outline-success:hover {
-	background: linear-gradient(35deg, #FC466B 3%, #3F5EFB 35%);
-}
-
-
 .social-icons {
 	text-align: left;
 	margin-top: 20px;
