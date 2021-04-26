@@ -58,7 +58,7 @@ let init = (id) => {
         // else $("#more").css()
         
 
-        url = ''.concat(baseURL, `movie/${data.id}/similar`, '?api_key=', APIKEY);
+        url = ''.concat(baseURL, `movie/${data.id}/recommendations`, '?api_key=', APIKEY);
 
         document.getElementById('all-movies').innerHTML = "";
 

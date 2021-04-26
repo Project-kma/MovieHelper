@@ -304,6 +304,13 @@ $("#searchN").click(() => {
   }
 })
 
+$("#random").click(() => {
+  $("#random").blur();
+  let all = document.getElementsByClassName("card");
+  let rndm = Math.floor(Math.random() * (all.length - 1 - 2)) + 1;
+  location = all[rndm].href;
+})
+
 
 $('#yearFrom').datepicker({
   // Можно выбрать тольо даты, идущие за сегодняшним днем, включая сегодня
