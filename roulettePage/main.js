@@ -307,8 +307,11 @@ $("#searchN").click(() => {
 $("#random").click(() => {
   $("#random").blur();
   let all = document.getElementsByClassName("card");
-  let rndm = Math.floor(Math.random() * (all.length - 1 - 2)) + 1;
-  location = all[rndm].href;
+  if (all.length != 0) {
+    let rndm = Math.floor(Math.random() * (all.length - 1 - 2)) + 1;
+    location = all[rndm].href;
+  }
+
 })
 
 
