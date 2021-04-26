@@ -32,7 +32,6 @@
 
 	<link href="carousel.css" rel="stylesheet">
 	<link href="main.css" rel="stylesheet">
-	<link href="svg-manipulation/style.css" rel="stylesheet">
 
 </head>
 
@@ -78,7 +77,7 @@
 					<div class="container">
 						<div class="carousel-caption text-start">
 							<h1>MOVIE HELPER</h1>
-							<p style="background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 70%); color: #efc0f5">want to watch a movie, but cannot decide which one?</p>
+							<p  class = "mini-title">want to watch a movie, but cannot decide which one?</p>
 							<p><a class="btn btn-lg btn-primary coloring" href="/roulettePage/index.html" style="transition: 0.5s;">Watch movies</a>
 							</p>
 						</div>
@@ -92,7 +91,7 @@
 					<div class="container">
 						<div class="carousel-caption">
 							<h1>Help is already here :)</h1>
-							<p style="background: linear-gradient(90deg, #FC466B 20%, #3F5EFB 70%); color: #efc0f5">the universe will make a choice for you</p>
+							<p class = "mini-title">the universe will make a choice for you</p>
 							<p><a class="btn btn-lg btn-primary coloring" href="/roulettePage/index.html">Connect to Universe</a>
 							</p>
 						</div>
@@ -106,7 +105,7 @@
 					<div class="container">
 						<div class="carousel-caption text-end">
 							<h1>One spin and a million emotions</h1>
-							<p style="background: linear-gradient(90deg, #FC466B 20%, #3F5EFB 70%); color: #efc0f5">Just try and feel it</p>
+							<p class = "mini-title">Just try and feel it</p>
 							<p><a class="btn btn-lg btn-primary coloring" href="/roulettePage/index.html">Spin the roulette</a>
 							</p>
 						</div>
@@ -181,7 +180,7 @@
 				<div class="col-lg-4 shpunk1">
 					<img id="new" src="pictures/new.png">
 					<h2>New films</h2>
-					<p class="lead">The newest films of this year. Press the button and make your choice</p>
+					<p class="lead">The newest films of this year. Press the button and make your own choice</p>
 					<p><a class="btn btn-secondary coloring2" href="/roulettePage/index.html#new">Show me &raquo;</a>
 					</p>
 				</div>
@@ -189,9 +188,9 @@
 
 
 				<div class="col-lg-4 shpunk2">
-					<img id="new" src="pictures/popularity.png">
-					<h2>Popular</h2>
-					<p class="lead">Top list of the most popular films in the history of cinema. Press the button and see it</p>
+					<img id="trand" src="pictures/popularity.png">
+					<h2>Tranding</h2>
+					<p class="lead">Top list of the most popular films for the week. Press the button and see it</p>
 					<p><a class="btn btn-secondary coloring2" href="/roulettePage/index.html#popular">Show me &raquo;</a>
 					</p>
 				</div>
@@ -199,9 +198,9 @@
 
 
 				<div class="col-lg-4 shpunk3">
-					<img id="new" src="pictures/cartoon.png">
+					<img id="cartoon" src="pictures/cartoon.png">
 					<h2>Cartoons</h2>
-					<p class="lead">The most favorite cartoons of childhood right in front of you. Press the button and enjoy</p>
+					<p class="lead">The most favorite cartoons right in front of you. Press the button and enjoy</p>
 					<p><a class="btn btn-secondary coloring2" href="/roulettePage/index.html#cartoons">Show me &raquo;</a>
 					</p>
 				</div>
@@ -209,52 +208,57 @@
 			</div>
 			<!-- /.row -->
 
-			<hr class="featurette-divider">
+			
 		</div>
 		<!-- /.container -->
 
-
-
-		<!-- FOOTER -->
-		<!-- <footer class="container">
-            <p class="float-end"><a href="#">Back to top</a></p>
-            <p class="bottom">&copy; 04.2021 Company, Bo&Ania-Inc.</p>
-            <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-        </footer> -->
-
-
+		<!-- <hr> -->
+	<!-- FOOTER -->
 		<footer>
 			<div class="footer-top">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6 col-lg-6">
-							<h3>Contact</h3>
+						<div class="col-md-6 col-lg-6 contacts">
+							<h5>Contact</h5>
 							<br>
+							
+							<img id="maps" src="pictures/maps.png">&nbsp;
+							<span class = "information">Hryhoriy Skovoroda Street, 2, Kyiv</span>
 
-							<div class ="image"><img id="maps" src="pictures/maps.png"></div>
-							<div class ="information"><p>Vhryhoriy Skovoroda Street, 2, Kyiv</p></div>
+							<br>
+							<br> 
 
-							<img id="phone" src="pictures/telephone.png">
-							<p><i class="fas fa-phone"></i> Phone: 044 425 6059</p>
+							<img id="phone" src="pictures/telephone.png" style="transform: scale(0.8)">&nbsp;
+							<span><i class="fas fa-phone"></i> Phone: 044 425 6059</span>
 
-							<img id="email" src="pictures/email.png">
-							<p><i class="fas fa-envelope"></i> Email: <a href="mailto:any@anybody.company">any@anybody.company</a></p>
-							<p><i class="fas fa-envelope"></i> Email: <a href="mailto:body@anybody.company">body@anybody.company</a></p>
+							<br>
+							<br> 
+
+							<img id="email" src="pictures/email.png" >&nbsp;
+							<span><i class="fas fa-envelope"></i> Email: <a href="mailto:any@anybody.company">any@anybody.company</a> 
+								  <p><i class="fas fa-envelope"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="mailto:body@anybody.company">body@anybody.company</a></p>
+							</span>
+							
 						</div>
 
+							<div class="col-md-6 col-lg-6 follow">
+								<h5>Follow us</h5>
 
-						<div class="col-md-6 col-lg-6">
-							<h3>Follow us</h3>
-							<p>
-								<a href="#"><i class="fab fa-telegram"></i></a> 
-								<a href="#"><i class="fab fa-facebook"></i></a> 
-								<a href="#"><i class="fab fa-instagram"></i></a> 
-								<a href="#"><i class="fab fa-twitter"></i></a>
-							</p>
+								<ul class="social-icons">
+									<!-- Facebook -->
+									<li><a href="https://www.facebook.com/bogdan.elizarov.3572"><img src='pictures/facebook.png' /></a></li>
+									<!-- Github -->
+									<li><a href="https://github.com/Project-kma/MovieHelper"><img src='pictures/github.png' /></a></li>
+									<!-- Instagram -->
+									<li><a href="https://www.instagram.com/elizarov017/"><img src='pictures/instagram.png' /></a></li>
+									<!-- Telegram -->
+									<li><a href="https://t.me/ne_meloch"><img src='pictures/telegram.png' /></a></li>
+								</ul>
+
+								<br>
+								<br>
+								<p class="bottom">&copy; AnyBody Company &nbsp; &nbsp;</p>
 						</div>
-					</div>
-				</div>
-			</div>
 
 			<br>
 			<br>
@@ -262,8 +266,6 @@
 			<div class="footer-bottom">
 				<footer class="container">
 					<p class="float-end"><a href="#">Back to top</a></p>
-
-					<p class="bottom">&copy; AnyBody Company</p>
 				</footer>
 			</div>
 		</footer>

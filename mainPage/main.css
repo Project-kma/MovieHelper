@@ -1,5 +1,6 @@
 body {
 	background-color: #c9bbfa;
+	padding-bottom: 0rem!important;
 }
 
 
@@ -13,6 +14,16 @@ h1 {
 	font: bold 3em Arial, sans-serif;
 	color: #d8c6dd;
 	text-shadow: #5d1b77 1px 1px 0, #5d1174 2px 2px 0, #4e2669 3px 3px 0, #4e2e58 4px 4px 0, #341f38 5px 5px 0;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+
+.mini-title {
+	background: linear-gradient(90deg, #FC466B 20%, #3F5EFB 70%);
+	color: #f7e0fa;
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 
@@ -20,6 +31,11 @@ h2 {
 	font: bold 3em Arial, sans-serif;
 	color: #6e2283;
 	text-shadow: #a75ec4 1px 1px 0, #b124db 2px 2px 0, #d2b0da 3px 3px 0;
+}
+
+
+h5 {
+	color: #6e2283;
 }
 
 
@@ -47,15 +63,30 @@ h2 {
 
 
 .coloring {
+	position: relative;
+	margin: 30px;
+	border-radius: 30px;
 	background: transparent;
+	text-align: center;
+	color: #ffffff;
+}
+
+
+.coloring::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	bottom: -3px;
+	left: -3px;
+	right: -3px;
+	background: linear-gradient(35deg, #FC466B, #3F5EFB)!important;
 	border-radius: 34px;
-	border-width: 2pt;
-	transition: 0.5s linear;
+	z-index: -1;
 }
 
 
 .coloring:hover {
-	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 75%);
+	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 55%);
 }
 
 
@@ -89,12 +120,46 @@ h2 {
 }
 
 
+.social-icons {
+	text-align: left;
+	margin-top: 20px;
+	padding-left: 0px;
+}
+
+
+.social-icons li {
+	display: inline-block;
+	list-style-type: none;
+}
+
+
+.social-icons li a {
+	border-bottom: none;
+}
+
+
+.social-icons li img {
+	width: 45px;
+	height: 45px;
+	margin-right: 20px;
+}
+
 .featurette-divider {
 	height: 6px!important;
 }
 
-.contacts {
-	display:inline-block;
-} 
+
+footer {
+	padding-top: 5px;
+	background-color: #b8abe7;
+	border-color: grey;
+}
 
 
+.information{
+	font-size: 12pt;
+}
+
+.bottom {
+	text-align: left;
+}
