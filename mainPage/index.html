@@ -32,6 +32,7 @@
 
 	<link href="carousel.css" rel="stylesheet">
 	<link href="main.css" rel="stylesheet">
+	<link href="/roulettePage/style.css" rel="stylesheet">
 
 </head>
 
@@ -55,7 +56,13 @@
 
 
 					<form class="d-flex">
-						<input aria-label="Search" class="form-control me-2" placeholder="Find a movie" type="search"> <button class="btn btn-outline-success" type="submit">Search</button>
+						<!-- <input aria-label="Search" class="form-control me-2" placeholder="Find a movie" type="search">
+						<button class="btn btn-outline-success coloring3" type="submit">Search</button> -->
+
+						<div class="input-group mb-3 searching" >
+							<input aria-label="Search" class="form-control" placeholder="Find a movie" type="search">
+							<button class="btn btn-outline-success coloring3" type="submit">Search</button>
+						</div>
 					</form>
 				</div>
 			</div>
@@ -75,7 +82,7 @@
 					<img id="posters" src="pictures/poster.png">
 
 					<div class="container">
-						<div class="carousel-caption text-start">
+						<div class="carousel-caption text-start main">
 							<h1>MOVIE HELPER</h1>
 							<p  class = "mini-title">want to watch a movie, but cannot decide which one?</p>
 							<p><a class="btn btn-lg btn-primary coloring" href="/roulettePage/index.html" style="transition: 0.5s;">Watch movies</a>
