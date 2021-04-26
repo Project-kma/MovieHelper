@@ -32,7 +32,7 @@ let actors = null;
 let getCard = (movie) => {
     // console.log(movie);
     return `<div class="col">
-    <div class="card" m-id="${movie["id"]}"  style="height: 100%;" data-toggle="tooltip" data-placement="top" title="${movie["title"]}">
+    <a class="card" m-id="${movie["id"]}" href="/filmPage/index.html#${movie["id"]}"  style="height: 100%;" data-toggle="tooltip" data-placement="top" title="${movie["title"]}">
       <div id="poster">
         <img src=${ movie["poster_path"] == null? "no-poster.jpg" : baseImageURL + "w500/" + movie["poster_path"]} alt="${movie["title"]}"/>
       </div>
@@ -44,7 +44,7 @@ let getCard = (movie) => {
         <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"/>
         </svg> ${movie["vote_average"]} </span>
       </div>
-    </div>
+    </a>
   </div>`
 }
 
@@ -79,7 +79,7 @@ let getConfig = function () {
     });
 
     actors = [];
-    for (let i = 1; i < 4; i++) {
+    for (let i = 1; i < 5; i++) {
       url = "".concat(baseURL, "person/popular?api_key=", APIKEY, "&page=", i);
       fetch(url)
       .then((result)=>{
@@ -203,9 +203,6 @@ document.addEventListener("click", function (e) {
 });
 }
 
-
-
-
 // &language=uk-UA
 // &language=ru-RU
 // &language=uk-US std
@@ -263,25 +260,30 @@ $("#search-movies").click(() => {
   let actor = $("#actor-name").attr("aid");
   let dateFrom = $("#yearFrom").val();
   let dateTo = $("#yearTo").val();
+  let sort = $("#inputGroupSelect02").children("option:selected").val();
 
-  console.log(ganre, actor, dateFrom, dateTo);
-
+  let step = 3;
+  
   if (ganre != -1) url += "&with_genres=" + ganre;
   if (actor != undefined) url += "&with_cast=" + actor;
   if (dateFrom != "") url += "&release_date.gte=" + dateFrom + "-01-01";
   if (dateTo != "") url += "&release_date.lte=" + dateTo + "-12-31";
+  if (sort != -1) {
+    url += "&sort_by=" + sort; 
+    // if (sort.charAt(sort.length - 3) == 'e') step = 20;
+  }
 
 
   document.getElementById('all-movies').innerHTML = "";
 
-  for (let i = 1; i < 3; i++) {
+  for (let i = 1; i < step; i++) {
     fetch(url + "&page=" + i)
     .then(result=>result.json())
     .then((data)=>{
     if (data.total_results > 0) {
       console.log(data);
       for (let movie in data.results) {
-        if (data.results[movie].vote_average != 0 && data.results[movie].vote_count != 0)
+        
         document.getElementById('all-movies').innerHTML += getCard(data.results[movie]);
       }
     }
@@ -290,12 +292,9 @@ $("#search-movies").click(() => {
       <span>No such results</span>
     </div></div>`);
     }
-    
   })
   }
-  
 });
-
 
 
 $('#yearFrom').datepicker({
@@ -314,7 +313,7 @@ document.addEventListener('DOMContentLoaded', getConfig());
 console.log(location)
 
 let initFunc = () => {
-  let url = ''.concat(baseURL, 'discover/movie', '?api_key=', APIKEY, "&sort_by=release_date.desc&release_date.lte=2021-04-30");
+  let url;
 
   // document.getElementById('all-movies').innerHTML = "";
   let steps = 0;

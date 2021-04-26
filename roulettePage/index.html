@@ -77,7 +77,7 @@
   <section class="py-5 text-center container">
     <div class="row row-cols-1  row-cols-md-2 row-cols-xl-3" style="justify-content: center;">
       <div class="col">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3" style="height: 40px;">
           <label class="input-group-text" for="inputGroupSelect01">Genre</label>
           <select class="form-select" id="inputGroupSelect01">
             <option value="-1" selected>Choose...</option>
@@ -85,13 +85,13 @@
         </div>
       </div>
       <div class="col">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3" style="height: 40px;">
           <span class="input-group-text" id="basic-addon1">Actor</span>
           <input id="actor-name" class="form-control autocomplete" type="text"  placeholder="Name">
         </div>
       </div>
       <div class="col">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3" style="height: 40px;">
           <div class="input-group">
             <span class="input-group-text">Year</span>
             <input type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" id="yearFrom" data-min-view="years"
@@ -102,8 +102,27 @@
         </div>
       </div>
       <div class="col">
-      <button type="button" id="search-movies" class="btn btn-secondary coloring2" style="margin: 15px;">Search</button>
-    </div>
+        <div class="input-group mb-3" style="height: 40px;">
+          <label class="input-group-text" for="inputGroupSelect02">Sort by</label>
+          <select class="form-select" id="inputGroupSelect02">
+            <option value="-1" selected>Choose...</option>
+            <option value="popularity.asc">Popularity increasing</option>
+            <option value="popularity.desc">Popularity decreasing</option> 
+            <option value="original_title.asc">Title A->Z</option>
+            <option value="original_title.desc">Title Z->A</option> 
+            <option value="release_date.asc">Release date increasing</option>
+            <option value="release_date.desc">Release date decreasing</option> 
+            <option value="vote_average.asc">Rating increasing</option>
+            <option value="vote_average.desc">Rating decreasing</option> 
+            <option value="vote_count.asc">Vote count increasing</option>
+            <option value="vote_count.desc">Vote count decreasing</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <button type="button" id="search-movies" class="btn btn-secondary coloring2" style="margin: 0px; height: 40px;">Search</button>
+      </div>
+      
     </div>
 
     <hr>
@@ -125,45 +144,55 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-lg-6 contacts">
-          <h3>Contact</h3>
+          <h5>Contact</h5>
+          <br>
+          
+          <img id="maps" src="/mainPage/pictures/maps.png">&nbsp;
+          <span class = "information">Hryhoriy Skovoroda Street, 2, Kyiv</span>
 
-      <br>
+          <br>
+          <br> 
 
-      <img id="maps" src="/mainPage/pictures/maps.png">
-      <p>Vhryhoriy Skovoroda Street, 2, Kyiv</p>
+          <img id="phone" src="/mainPage/pictures/telephone.png" style="transform: scale(0.8)">&nbsp;
+          <span><i class="fas fa-phone"></i> Phone: 044 425 6059</span>
 
-      <img id="phone" src="/mainPage/pictures/telephone.png">
-              <p><i class="fas fa-phone"></i> Phone: 044 425 6059</p>
+          <br>
+          <br> 
 
-      <img id="email" src="/mainPage/pictures/email.png">
-              <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a></p>
-              </div>
-
-              <div class="col-md-6 col-lg-6">
-                <h3>Follow us</h3>
-                <p>
-        <a href="#"><i class="fab fa-telegram"></i></a> 
-                  <a href="#"><i class="fab fa-facebook"></i></a> 
-        <a href="#"><i class="fab fa-instagram"></i></a> 
-        <a href="#"><i class="fab fa-twitter"></i></a>
-                </p>
-              </div>
+          <img id="email" src="/mainPage/pictures/email.png" >&nbsp;
+          <span><i class="fas fa-envelope"></i> Email: <a href="mailto:any@anybody.company">any@anybody.company</a> 
+              <p><i class="fas fa-envelope"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="mailto:body@anybody.company">body@anybody.company</a></p>
+          </span>
+          
         </div>
-    </div>
-  </div>
 
-<br>
-<br>
+          <div class="col-md-6 col-lg-6 follow">
+            <h5>Follow us</h5>
+
+            <ul class="social-icons">
+              <!-- Facebook -->
+              <li><a href="https://www.facebook.com/bogdan.elizarov.3572"><img src='/mainPage/pictures/facebook.png' /></a></li>
+              <!-- Github -->
+              <li><a href="https://github.com/Project-kma/MovieHelper"><img src='/mainPage/pictures/github.png' /></a></li>
+              <!-- Instagram -->
+              <li><a href="https://www.instagram.com/elizarov017/"><img src='/mainPage/pictures/instagram.png' /></a></li>
+              <!-- Telegram -->
+              <li><a href="https://t.me/ne_meloch"><img src='/mainPage/pictures/telegram.png' /></a></li>
+            </ul>
+
+            <br>
+            <br>
+            <p class="bottom">&copy; AnyBody Company &nbsp; &nbsp;</p>
+        </div>
+
+  <br>
+  <br>
 
   <div class="footer-bottom">
     <footer class="container">
-  <p class="float-end"><a href="#">Back to top</a></p>
-
-  <p class="bottom">&copy; 04.2021 Company, Bo&Ania-Inc.</p>
-</footer>
+      <p class="float-end"><a href="#">Back to top</a></p>
+    </footer>
   </div>
-
-
 </footer>
 
 

@@ -58,6 +58,12 @@ body {
     left: 0;
     right: 0;
   }
+
+  a {
+    text-decoration: none;
+    text-shadow: none;
+}
+
   .autocomplete-items div {
     padding: 10px;
     cursor: pointer;
