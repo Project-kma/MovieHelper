@@ -84,6 +84,28 @@ body {
     color: #ffffff;
   }
 
+  #random {
+    margin: 0px; 
+  }
+
+  #search-movies {
+    margin: 0px; 
+  }
+
+  @media (max-width: 1200px) {
+    #random {
+      margin: 0px; 
+      margin-top: 10px;
+    }
+  
+    #search-movies {
+      margin: 0px; 
+      margin-top: 10px;
+    }
+  }
+
+ 
+
   @media (max-width: 600px) {
     body{
       font-size: 1.2rem;
